@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Formation Live Streaming OBS & vMix</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#050505;
+    color:white;
+    overflow-x:hidden;
+}
+
+
+/* Animation générale */
+
+.hidden{
+    opacity:0;
+    transform:translateY(50px);
+    transition:1s;
+}
+
+.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+
+
+/* HEADER */
+
+header{
+
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:20px;
+
+    background:
+    linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.85)),
+    url("https://images.unsplash.com/photo-1598488035139-bdbb2231ce04");
+
+    background-size:cover;
+    background-position:center;
+
+}
+
+
+.hero h1{
+
+    font-size:55px;
+    font-weight:800;
+    animation:zoom 1.5s;
+
+}
+
+
+.hero h1 span{
+
+    color:#d4a200;
+
+}
+
+
+.hero p{
+
+    max-width:700px;
+    margin:25px auto;
+    font-size:20px;
+    color:#ddd;
+    animation:fade 2s;
+
+}
+
+
+.btn{
+
+    display:inline-block;
+    padding:15px 35px;
+    background:#d4a200;
+    color:#000;
+    border-radius:40px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.4s;
+
+}
+
+
+.btn:hover{
+
+    transform:scale(1.1);
+    box-shadow:0 0 30px #d4a200;
+
+}
+
+
+
+/* MENU */
+
+nav{
+
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(0,0,0,.6);
+backdrop-filter:blur(10px);
+z-index:1000;
+
+}
+
+
+.logo{
+
+font-size:25px;
+font-weight:bold;
+color:#d4a200;
+
+}
+
+
+nav a{
+
+color:white;
+text-decoration:none;
+margin-left:25px;
+
+}
+
+
+nav a:hover{
+
+color:#d4a200;
+
+}
+
+
+
+/* SECTION */
+
+section{
+
+padding:80px 8%;
+
+}
+
+
+.title{
+
+text-align:center;
+font-size:40px;
+margin-bottom:40px;
+color:#d4a200;
+
+}
+
+
+
+
+/* CARTES */
+
+.cards{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+
+}
+
+
+.card{
+
+background:#111;
+padding:30px;
+border-radius:20px;
+border:1px solid #222;
+transition:.5s;
+
+}
+
+
+.card:hover{
+
+transform:translateY(-15px);
+border-color:#d4a200;
+box-shadow:0 15px 40px rgba(212,162,0,.2);
+
+}
+
+
+.card h3{
+
+color:#d4a200;
+margin-bottom:15px;
+
+}
+
+
+.card p{
+
+color:#ccc;
+line-height:1.7;
+
+}
+
+
+
+/* Animation */
+
+@keyframes zoom{
+
+from{
+transform:scale(.5);
+opacity:0;
+}
+
+to{
+transform:scale(1);
+opacity:1;
+}
+
+}
+
+
+@keyframes fade{
+
+from{
+opacity:0;
+}
+
+to{
+opacity:1;
+}
+
+}
+
+
+
+</style>
+
+</head>
+
+<body>
+
+
+<nav>
+
+<div class="logo">
+LIVE STREAM PRO
+</div>
+
+<div>
+
+<a href="#formation">Formation</a>
+<a href="#programme">Programme</a>
+<a href="#inscription">Inscription</a>
+
+</div>
+
+</nav>
+
+
+<header>
+
+
+<div class="hero">
+
+<h1>
+Formation <span>Live Streaming</span>
+</h1>
+
+
+<p>
+Apprenez à créer des directs professionnels avec OBS Studio et vMix pour vos églises, mariages, événements et productions vidéo.
+</p>
+
+
+<a href="#inscription" class="btn">
+S'inscrire maintenant
+</a>
+
+
+</div>
+
+
+</header>
+<section id="formation" class="hidden">
+
+<h2 class="title">À propos de la formation</h2>
+
+
+<div class="cards">
+
+
+<div class="card">
+
+<h3>🎥 OBS Studio</h3>
+
+<p>
+Maîtrisez OBS Studio : création des scènes, ajout des sources, réglage audio, transitions et diffusion en direct.
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>⚡ vMix Professionnel</h3>
+
+<p>
+Découvrez vMix pour réaliser des productions live avancées avec plusieurs caméras, overlays et effets.
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>🚀 Production Live</h3>
+
+<p>
+Apprenez à gérer un vrai direct pour les églises, conférences, mariages et événements professionnels.
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+
+
+<section id="programme" class="hidden">
+
+
+<h2 class="title">
+Programme de formation
+</h2>
+
+
+
+<div class="cards">
+
+
+<div class="card">
+
+<h3>Module 1</h3>
+
+<p>
+Introduction au Live Streaming<br><br>
+
+- Matériel nécessaire<br>
+- Connexion internet<br>
+- Préparation d'un direct
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>Module 2</h3>
+
+<p>
+OBS Studio<br><br>
+
+- Installation<br>
+- Scènes et sources<br>
+- Audio professionnel<br>
+- Diffusion Facebook & YouTube
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>Module 3</h3>
+
+<p>
+vMix<br><br>
+
+- Configuration<br>
+- Gestion multicaméra<br>
+- Titres et transitions<br>
+- Production professionnelle
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>Module 4</h3>
+
+<p>
+Projet final<br><br>
+
+Réalisation d'un vrai direct complet avec les techniques apprises.
+</p>
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<section class="hidden">
+
+
+<h2 class="title">
+Pourquoi choisir cette formation ?
+</h2>
+
+
+
+<div class="cards">
+
+
+<div class="card">
+
+<h3>✅ Formation pratique</h3>
+
+<p>
+Vous pratiquez directement avec les logiciels utilisés par les professionnels.
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>🏆 Compétences utiles</h3>
+
+<p>
+Apprenez un domaine recherché dans les événements et la communication digitale.
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>💻 Accompagnement</h3>
+
+<p>
+Un apprentissage adapté aux débutants et aux passionnés de vidéo.
+</p>
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<section id="inscription" class="hidden">
+
+
+<h2 class="title">
+Inscription à la formation
+</h2>
+
+
+
+<div class="form-box">
+
+
+<input id="nom" type="text" placeholder="Votre nom complet">
+
+
+<input id="numero" type="text" placeholder="Votre numéro WhatsApp">
+
+
+<input id="ville" type="text" placeholder="Votre ville">
+
+
+<input id="email" type="email" placeholder="Votre email">
+
+
+
+<select id="niveau">
+
+<option>Débutant</option>
+
+<option>Intermédiaire</option>
+
+<option>Avancé</option>
+
+</select>
+
+
+
+<textarea id="message" rows="5" placeholder="Votre message"></textarea>
+
+
+
+<button onclick="envoyer()">
+
+Envoyer mon inscription
+
+</button>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<section class="hidden">
+
+
+<h2 class="title">
+Informations
+</h2>
+
+
+<div class="cards">
+
+
+<div class="card">
+
+<h3>📅 Date</h3>
+
+<p>
+12.07 AU 20.08
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>⏰ Horaire</h3>
+15H-18H
+<p>
+Formation pratique avec suivi des participants.
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>📞 Contact</h3>
+
+<p>
+WhatsApp : +243 855 222 581
+</p>
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+<footer>
+
+<p>
+© 2026 Live Stream Pro - Formation OBS & vMix
+</p>
+
+</footer>
+<style>
+
+/* FORMULAIRE */
+
+.form-box{
+
+max-width:650px;
+margin:auto;
+background:#111;
+padding:35px;
+border-radius:25px;
+border:1px solid #222;
+
+}
+
+
+input,select,textarea{
+
+width:100%;
+padding:15px;
+margin:12px 0;
+background:#080808;
+color:white;
+border:1px solid #333;
+border-radius:10px;
+font-size:16px;
+
+}
+
+
+input:focus,
+select:focus,
+textarea:focus{
+
+border-color:#d4a200;
+outline:none;
+
+}
+
+
+button{
+
+width:100%;
+padding:16px;
+border:none;
+border-radius:40px;
+background:#d4a200;
+color:#000;
+font-size:18px;
+font-weight:bold;
+cursor:pointer;
+transition:.4s;
+
+}
+
+
+button:hover{
+
+transform:scale(1.05);
+box-shadow:0 0 30px #d4a200;
+
+}
+
+
+
+footer{
+
+background:#000;
+text-align:center;
+padding:25px;
+color:#aaa;
+
+}
+
+
+
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+
+.hero h1{
+
+font-size:35px;
+
+}
+
+
+nav{
+
+padding:15px;
+
+}
+
+
+nav a{
+
+display:none;
+
+}
+
+
+.title{
+
+font-size:30px;
+
+}
+
+
+}
+
+</style>
+
+
+
+<script>
+
+
+// Animation au scroll
+
+const elements = document.querySelectorAll(".hidden");
+
+
+const observer = new IntersectionObserver((entries)=>{
+
+
+entries.forEach((entry)=>{
+
+
+if(entry.isIntersecting){
+
+entry.target.classList.add("show");
+
+}
+
+
+});
+
+
+});
+
+
+
+elements.forEach((el)=>{
+
+observer.observe(el);
+
+});
+
+
+
+
+
+
+
+// Envoi inscription WhatsApp
+
+
+function envoyer(){
+
+
+let nom =
+document.getElementById("nom").value;
+
+
+let numero =
+document.getElementById("numero").value;
+
+
+let ville =
+document.getElementById("ville").value;
+
+
+let email =
+document.getElementById("email").value;
+
+
+let niveau =
+document.getElementById("niveau").value;
+
+
+let message =
+document.getElementById("message").value;
+
+
+
+if(nom=="" || numero==""){
+
+alert("Veuillez remplir votre nom et numéro WhatsApp");
+
+return;
+
+}
+
+
+
+
+let monWhatsApp="243855222581";
+
+
+
+let texte =
+
+" Nouvelle inscription Formation Live Streaming %0A%0A"+
+
+"   Nom : "+nom+"%0A"+
+
+"📱 WhatsApp : "+numero+"%0A"+
+
+". Ville : "+ville+"%0A"+
+
+". Email : "+email+"%0A"+
+
+". Niveau : "+niveau+"%0A"+
+
+" .Message : "+message;
+
+
+
+window.open(
+
+"https://wa.me/"+monWhatsApp+"?text="+texte,
+
+"_blank"
+
+);
+
+
+
+}
+
+
+</script>
+
+
+
+</body>
+
+</html>
